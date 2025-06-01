@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "strict": false,
+    "outDir": "/build",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": "./",
+    // "paths": {
+    //   "@uiFixture/*": ["app/fixtures/*"],
+    //   "@page/*": ["app/ui/pages/*"],
+    //   "@controllers/*": ["app/api/controllers/*"]
+    // }
+  }
+}

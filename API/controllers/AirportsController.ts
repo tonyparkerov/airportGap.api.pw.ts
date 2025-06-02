@@ -1,13 +1,18 @@
 import { BaseController } from "./BaseController";
 
 export class AirportsController extends BaseController {
-  async getAll() {
-    const response = await this.request.get("/api/airports");
-    return response;
+  private resource = "/api/airports";
+
+  async getAll(page?: number) {
+    const url = page ? `${this.resource}?page=${page}` : this.resource;
+    return await this.request.get(url);
   }
 
   async getById(id: string) {
-    const response = await this.request.get(`/api/airports/${id}`);
-    return response;
+    return await this.request.get(`${this.resource}/${id}`);
+  }
+
+  async calculateDistanceBetween(airports?: {from?: string, to?: string}) {
+
   }
 }

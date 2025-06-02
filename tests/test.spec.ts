@@ -3,7 +3,7 @@ import { test, expect } from "API/fixtures/api.fixture";
 test.use({ extraHTTPHeaders: {} });
 
 test("Get airport by id", async ({ api }) => {
-  let response = await api.airports.getAll();
+  let response = await api.airports.getAll(2);
   let body = await response.json();
   const airportId = body.data[0].id;
 

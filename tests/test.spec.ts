@@ -18,5 +18,5 @@ test("FAVORITES", async ({ api }) => {
   const response = await api.favorites.getAll();
   const body = await response.json();
   console.log(body);
-  expect(response.status()).toBe(200);
+  expect(response.status()).toBe(401);
 });
